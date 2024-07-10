@@ -14,6 +14,12 @@ helloworld4   | 对不同环境使用不同的配置文件
 helloworld5   | 用 sections 和 menus 组织内容
 helloworld6   | 用 bundles 更好地整合页面
 helloworld7   | 用 taxonomies 组织内容
+helloworld8   | 使用 Go 模板语言
+helloworld9   | 使用外部数据添加内容
+helloworld10  | 使用结构化数据
+helloworld11  | 构建模板结构 (难点)
+helloworld12  | 使用 partials (难点: partialCached)
+
 
 themes 子目录中存放通用主题. 一般主题是存放在站点目录的 themes 子目录中的, 如 sites/helloworld/themes,
 但 helloworld 等站点都依赖同一个主题, 为避免存放大量重复文件, 就都放在上层公共目录中了,
