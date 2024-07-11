@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+    <ul>
+      <li>{{ .group }}</li>
+        {{ if .subgroups }}
+          <ul>
+            {{ range .subgroups }}
+              <li>{{ .subgroup }}</li>
+                {{ if .projects }}
+                  <ul>
+                    {{ range .projects }}
+                      <li>
+                        <a href="{{ .url }}" target="_blank">{{ .project }}</a>
+                      </li>
+                    {{ end }}
+                  </ul>
+                {{ end }}
+            {{ end }}
+          </ul>
+        {{ end }}
+    </ul>
+  {{ end }}
+
+
+<!--
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+-->
+
+{{ end }}

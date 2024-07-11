@@ -1,0 +1,29 @@
+groups:
+  - group: AAAAA
+    subgroups:
+      - subgroup: A1
+        projects:
+          - project: A1-foo
+          - project: A1-bar
+          - project: A1-bar
+          - project: A1-bar
+          - project: A1-bar
+          - project: A1-bar
+      - subgroup: A2
+        projects:
+          - project: A2-foo
+          - project: A2-bar
+  - group: BBBBB
+    subgroups:
+      - subgroup: B1
+        projects:
+          - project: B1-foo
+          - project: B1-bar
+          - project: B1-bar
+          - project: B1-bar
+          - project: B1-bar
+          - project: B1-bar
+      - subgroup: B2
+        projects:
+          - project: B2-foo
+          - project: B2-bar

@@ -1,0 +1,21 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Development Navigation
+
+themesDir: ../../themes
+theme: zdev3
+
+menus:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 100
+    - identifier: about
+      name: About
+      url: /about
+      weight: 200
+    - identifier: source
+      name: Source
+      url: /
+      weight: 300

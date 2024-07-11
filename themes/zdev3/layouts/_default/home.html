@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+{{ partial "sidebar.html" . }}
+
+<div class="content">
+  {{ range .Site.Data.nav.groups }}
+    <div class="group">
+      <h2 class="groupName" id="{{ .group }}">{{ .group }}</h2>
+    </div>
+
+    {{ if .subgroups }}
+      {{ range .subgroups }}
+        <div class="subgroup">
+          <h3 class="subgroupName">{{ .subgroup }}</h3>
+            {{ if .projects }}
+              <div class="projects">
+                {{ range .projects }}
+                  <div class="project">
+                    <div class="projectLogo">
+                      <img src="../images/gitlab.svg">
+                    </div>
+                    <div class="projectInfo">
+                      <p class="projectName">{{ .project }}</p>
+                      <p class="projectDesc">{{ .project }} project</p>
+                    </div>
+                    <p class="projectLink">
+                      <a href="##">git</a>
+                      <a href="##">dev</a>
+                      <a href="##">usr</a>
+                      <a href="##">pkg</a>
+                      <a href="##">dep</a>
+                    </p>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+<!--
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+-->
+
+</div>
+
+{{ end }}

@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+<div class="content">
+  {{ range .Site.Data.nav.groups }}
+    <div class="group">
+      <h2>{{ .group }}</h2>
+    </div>
+
+    {{ if .subgroups }}
+      {{ range .subgroups }}
+        <div class="subgroup">
+          <h3>{{ .subgroup }}</h3>
+            {{ if .projects }}
+              <div class="projects">
+                {{ range .projects }}
+                  <div class="project">
+                    <p>{{ .project }}<br>
+                      <a href="{{ .gitUrl }}">git</a>
+                      <a href="{{ .devdocUrl }}">dev</a>
+                      <a href="{{ .usrdocUrl }}">usr</a>
+                      <a href="{{ .pkgUrl }}">pkg</a>
+                      <a href="{{ .depUrl }}">dep</a>
+                    </p>
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+
+<!--
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+-->
+</div>
+
+{{ end }}

@@ -2,6 +2,8 @@
 
 ## 代码介绍
 
+### sites
+
 sites 子目录中包括学习使用的 helloworld 项目和练手用的其他项目的源码.
 其中 helloworld 项目随着特性不断增加, 后面跟的数字不断增大.
 
@@ -20,8 +22,13 @@ helloworld10  | 使用结构化数据
 helloworld11  | 构建模板结构 (难点)
 helloworld12  | 使用 partials (难点: partialCached)
 
+### themes
 
-themes 子目录中存放通用主题. 一般主题是存放在站点目录的 themes 子目录中的, 如 sites/helloworld/themes,
+themes 子目录中存放通用主题. 
+
+### 注意
+
+一般主题是存放在站点目录的 themes 子目录中的, 如 sites/helloworld/themes,
 但 helloworld 等站点都依赖同一个主题, 为避免存放大量重复文件, 就都放在上层公共目录中了,
 这时要修改使用此主题的站点的配置文件, 如:
 ```yaml
@@ -35,3 +42,5 @@ theme: Eclectic
 - [《Hugo in Action》官方](https://www.manning.com/books/hugo-in-action)
 - [《Hugo in Action》在线版本(中文,不完整)](https://hugo-in-action.foofun.cn/zh/)
 - [Hugo Documentation](https://gohugo.io/documentation/)
+- [tailwindcss中文文档](https://www.tailwindcss.cn/)
+- [CSS Grid 网格布局教程](https://ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
